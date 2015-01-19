@@ -1,5 +1,6 @@
 # House APP with JQuery Mobile and PhoneGAP
 * Prototype http://bjgdrf.com/app/welcome.html
+<<<<<<< HEAD
 
 
 
@@ -14,3 +15,5 @@
 * 屏幕适配	2月9	2月12	Android程序
 * 联调	2月13	2月15	
 * 优化	2月16	2月17	完成品
+=======
+>>>>>>> Add more page
