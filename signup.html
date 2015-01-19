@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用户注册</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<style type="text/css">
+#slider-type .ui-slider {width: 100%;}
+</style>
+
+<body>
+
+<div data-role="page">
+
+<!-- HEADER -->
+<div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
+<h1 class="ui-title" role="heading" aria-level="1">
+用户注册
+</h1>
+</div>
+
+<!-- MAIN -->
+<div role="main" class="ui-content">
+
+<div class="ui-field-contain">
+    <label for="nickname">用户昵称</label>
+    <input type="text" name="nickname" id="nickname" placeholder="请输入您的名字" value="">
+</div>
+<div class="ui-field-contain">
+    <label for="phone">手机号</label>
+    <input type="text" name="phone" id="phone" placeholder="请输入手机号" value="">
+</div>
+<div class="ui-field-contain">
+    <label for="vcode">验证码</label>
+    <div class="ui-grid-a">
+    <div class="ui-block-a">
+    <input type="text" name="vcode" id="vcode" value="">
+    </div>
+    <div class="ui-block-b">
+    <a class="ui-shadow ui-btn ui-corner-all" href="#">免费获取</a>
+    </div>
+    </div>
+</div>
+<div class="ui-field-contain">
+    <label for="password">密码</label>
+    <input type="password" name="password" id="password" placeholder="请输入密码" value="">
+</div>
+<div class="ui-field-contain">
+    <label for="password2">确认密码</label>
+    <input type="password" name="password2" id="password2" placeholder="请再次输入密码" value="">
+</div>
+
+<div class="ui-field-contain">
+    <label for="password2">确认密码</label>
+    <input type="password" name="password2" id="password2" placeholder="请再次输入密码" value="">
+</div>
+
+<div id="slider-type" class="ui-grid-solo">
+<div class="ui-block-a">
+<select name="type" id="type" data-role="slider" style="width:90%">
+    <option value="0">我是找房客</option>
+    <option value="1">我是经纪人</option>
+</select>
+</div>
+</div>
+
+
+<div data-demo-html="true">
+<div class="ui-grid-solo">
+    <div class="ui-block-a">
+    <a class="ui-shadow ui-btn ui-corner-all" data-theme="d">注册</a>
+    </div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
