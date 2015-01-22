@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>悬赏找整租</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+
+<body>
+<div data-role="page">
+
+<!-- HEADER -->
+<div data-role="header"  data-position="fixed" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
+	<h1 class="ui-title" role="heading" aria-level="1">悬赏找整租</h1>
+	<a href="#outside" data-icon="bars" data-iconpos="notext" data-shadow="true" data-iconshadow="true">Menu</a>
+	<a href="xuanshangtiaojian.html" data-icon="edit" data-iconpos="notext" data-shadow="true" data-iconshadow="true">change</a>
+</div>
+
+
+<div role="main" class="ui-content">
+	<div class="ui-grid-solo">
+		<center>
+			<img src="#" alt="ad">
+		</center>
+	</div>
+	
+	<h3>请输入您对房子的要求</h3>
+	
+	<div class="ui-field-contain">
+		<label for="select-choice-a">居室户型</label>
+		<select select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+                <option value="null">请选择您的居室户型</option>
+                <option value="#">1000元</option>
+                <option value="#">1100元</option>
+                <option value="#">1200元</option>
+                <option value="#">1300元</option>
+                <option value="#">1400元</option>
+         </select>
+		
+		<label for="budget">租房预算</label>
+		<input type="text" name="budget" id="budget" placeholder="请输入您的租房预算（元/月）" value="">
+		
+		<label for="select-choice-b">悬赏金额</label>
+		<select select name="select-choice-b" id="select-choice-b" data-native-menu="false">
+                <option value="null">请选择您的赏金</option>
+                <option value="#">1000元</option>
+                <option value="#">1100元</option>
+                <option value="#">1200元</option>
+                <option value="#">1300元</option>
+                <option value="#">1400元</option>
+         </select>		
+		
+		<label for="select-choice-c">个性标签</label>
+		<select select name="select-choice-c" id="select-choice-c" data-native-menu="false">
+                <option value="null">请选择您的个性标签</option>
+                <option value="#">1000元</option>
+                <option value="#">1100元</option>
+                <option value="#">1200元</option>
+                <option value="#">1300元</option>
+                <option value="#">1400元</option>
+         </select>		
+
+		<label for="select-choice-d">目标区域</label>
+			<a href="#" class="ui-shadow ui-corner-all ui-btn ui-btn-icon-right ui-icon-carat-r">选择区域</a>
+			
+	</div>
+
+	<h3>补充说明</h3>
+	
+	<div class="ui-field-contain">
+		<textarea cols="40" rows="8" name="textarea" id="textarea"  data-clear-btn="true"></textarea>
+	</div>
+
+	<button type="submit" id="submit" class="ui-shadow ui-btn ui-btn-b ui-corner-all">发布找房悬赏</button>
+	
+</div><!-- /content -->
+
+
+<div data-role="panel" id="outside" data-theme="b">
+		<ul data-role="listview">
+			<li data-icon="home"><a href="#" >我的选房单</a></li>
+			<li data-icon="info"><a href="#" >悬赏条件</a></li>
+			<li data-icon="mail"><a href="#" >咨询消息</a></li>
+			<li data-icon="recycle"><a href="#" >版本更新</a></li>
+			<li data-icon="delete"><a href="#" >安全退出</a></li>
+		</ul>
+		<!-- <a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline">安全退出</a> -->
+</div><!-- /panel -->
+
+</div>
+
+
+</body>
+</html>
