@@ -3,22 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>房前屋后</title>
+    <title>恭喜注册成功</title>
     <link rel="shortcut icon" href="favicon.ico">
     <!--<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">-->
     <link rel="stylesheet" href="css/themes/flat/jquery.mobile.flatui.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+    $(function() {
+        window.setTimeout(function(){location.href='house_list.html'},2000);
+    })
+    </script>
 </head>
 
 <body>
 
 <div data-role="page">
-
 <!-- HEADER -->
 <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
 <h1 class="ui-title" role="heading" aria-level="1">
-房前屋后悬赏找房
+恭喜注册成功
 </h1>
 </div>
 
@@ -27,20 +31,10 @@
 
 <div class="ui-grid-solo">
 <center>
-<img src="images/welcome.jpg" alt="welcome image" />
+<p>
+恭喜您注册成功，即将为您跳转到首页。
+</p>
 </center>
-</div>
-
-
-<div data-demo-html="true">
-<div class="ui-grid-a">
-    <div class="ui-block-a">
-    <a href="signup.html" class="ui-btn">注册</a>
-    </div>
-    <div class="ui-block-b">
-    <a href="signin.html"  class="ui-btn">登录</a>
-    </div>
-</div>
 </div>
 
 

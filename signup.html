@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>用户注册</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <!--<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="css/themes/flat/jquery.mobile.flatui.css">
+    <style type="text/css">
+    #slider-type .ui-slider {width: 100%;}
+    </style>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
-<style type="text/css">
-#slider-type .ui-slider {width: 100%;}
-</style>
+<script>
+    $(function(){
+        
+    });
+</script>
 
 <body>
-
 <div data-role="page">
 
 <!-- HEADER -->
 <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
+<a href="index.html" data-icon="delete" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">取消</a>
 <h1 class="ui-title" role="heading" aria-level="1">
 用户注册
 </h1>
@@ -40,10 +46,10 @@
     <label for="vcode">验证码</label>
     <div class="ui-grid-a">
     <div class="ui-block-a">
-    <input type="text" name="vcode" id="vcode" value="">
+    <input type="text" name="vcode" id="vcode" value="" placeholder="请输入验证码">
     </div>
-    <div class="ui-block-b">
-    <a class="ui-shadow ui-btn ui-corner-all" href="#">免费获取</a>
+    <div class="ui-block-b" style="margin-top: 16px; padding-left: 20px;">
+    <a class="ui-shadow" href="#" style="top: 20px;">免费获取</a>
     </div>
     </div>
 </div>
@@ -63,7 +69,7 @@
 
 <div id="slider-type" class="ui-grid-solo">
 <div class="ui-block-a">
-<select name="type" id="type" data-role="slider" style="width:90%">
+<select name="type" id="type" data-role="slider" data-theme="b" style="width:90%" alt="滑动按钮选择身份">
     <option value="0">我是找房客</option>
     <option value="1">我是经纪人</option>
 </select>
@@ -74,7 +80,7 @@
 <div data-demo-html="true">
 <div class="ui-grid-solo">
     <div class="ui-block-a">
-    <a class="ui-shadow ui-btn ui-corner-all" data-theme="d">注册</a>
+    <a href="signup_succ.html" id="sign-btn" class="ui-shadow ui-btn ui-corner-all" data-theme="d">注册</a>
     </div>
 </div>
 </div>

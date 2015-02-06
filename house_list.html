@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>我的选房单</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+    <!--<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">-->
+    <link rel="stylesheet" href="css/themes/flat/jquery.mobile.flatui.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 
@@ -25,11 +27,11 @@
 <div role="main" class="ui-content">
 	<div class="ui-grid-solo">
 		<center>
-			<img src="#" alt="head">
+			<img src="images/banner.jpg" alt="head">
 		</center>
 	</div>
 
-    <ul data-role="listview" data-inset="true" class="ui-listview">
+    <ul data-role="listview" data-inset="true" class="ui-listview" data-theme="c">
         <li class="ui-li-has-thumb">
 			<a href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
 				<img src="images/img/album-bb.jpg" alt="item1">
@@ -58,7 +60,7 @@
 	
 	<div>
 	<center>
-	<h2>您目前没有更多的在询房源哦！</h2>
+	<p>您目前没有更多的在询房源哦！</p>
 	</center>
 	</div>
 
@@ -71,7 +73,7 @@
 			<li data-icon="info"><a href="#" >悬赏条件</a></li>
 			<li data-icon="mail"><a href="#" >咨询消息</a></li>
 			<li data-icon="recycle"><a href="#" >版本更新</a></li>
-			<li data-icon="delete"><a href="#" >安全退出</a></li>
+			<li id="signout-btn" data-icon="delete"><a href="#" >安全退出</a></li>
 		</ul>
 		<!-- <a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline">安全退出</a> -->
 </div><!-- /panel -->
