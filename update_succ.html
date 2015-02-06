@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>忘记密码</title>
+    <title>密码重置成功</title>
     <link rel="shortcut icon" href="favicon.ico">
     <!--<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">-->
     <link rel="stylesheet" href="css/themes/flat/jquery.mobile.flatui.css">
@@ -11,36 +11,34 @@
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
-<style type="text/css">
-#slider-type .ui-slider {width: 100%;}
-</style>
-
 <body>
-<div data-role="page">
 
+<div data-role="page">
 <!-- HEADER -->
 <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
-<a href="signin.html" data-icon="back" class="ui-btn-left">返回</a>
 <h1 class="ui-title" role="heading" aria-level="1">
-忘记密码
+密码重置成功
 </h1>
 </div>
 
 <!-- MAIN -->
-<form action="update_password.html" method="get">
 <div role="main" class="ui-content">
-	<div class="ui-field-contain">
-		<label for="phone">手机号</label>
-		<input type="text" name="phone" id="phone" placeholder="请输入手机号" value="">
-	</div>
 
-	<div class="ui-grid-solo">
-		<div class="ui-block-a">
-		<button class="ui-shadow ui-btn ui-corner-all" data-theme="d">下一步</button>
-		</div>
-	</div>
+<div class="ui-grid-solo">
+<center>
+<p>
+密码重置成功，您可以用新的密码登陆了
+</p>
+</center>
 </div>
-</form>
+
+<div class="ui-grid-solo">
+    <div class="ui-block-a" data-theme="b">
+    <a href="signin.html" class="ui-shadow ui-btn ui-corner-all">前往登陆</a>
+    </div>
+</div>
+
+</div>
 
 </div>
 
