@@ -1,32 +1,24 @@
 <div id="signin-page" data-role="page">
-<!-- HEADER -->
-<div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
-<h1 class="ui-title" role="heading" aria-level="1">
-房前屋后悬赏找房
-</h1>
-<a href="index.html" data-icon="home" data-iconpos="notext" data-shadow="true" data-iconshadow="true">首页</a>
-</div>
-<!-- MAIN -->
-<div role="main" class="ui-content">
-	<div class="ui-field-contain">
-		<label for="phone">手机号</label>
-		<input type="text" name="phone" id="phone" placeholder="请输入手机号" value="">
-	</div>
-	<div class="ui-field-contain">
-		<label for="password">密码</label>
-		<input type="password" name="password" id="password" placeholder="请输入密码" value="">
-	</div>
+    <!-- HEADER -->
+    <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
+        <script src="js/signin.js"></script>
+        <h1 class="ui-title" role="heading" aria-level="1">用户登录</h1>
+        <a href="index.html" data-icon="home" data-iconpos="notext" data-shadow="true" data-iconshadow="true">首页</a>
+    </div>
 
-
-	<div data-demo-html="true">
-	<div class="ui-grid-solo">
-		<div class="ui-block-a" data-theme="d">
-            <a id="signin-btn" href="house_list.html" class="ui-shadow ui-btn ui-corner-all">登录</a>
-		</div>
-	</div>
-	</div>
-	
-	<a href="forget_password.html"><p style="text-align:right">忘记密码？</p></a>	
-	
-</div>
+    <!-- MAIN -->
+    <div role="main" class="ui-content">
+        <form id="signin-form" method="GET">
+            <div class="ui-field-contain">
+                <label for="phone">手机号</label>
+                <input type="text" name="phone" id="phone" placeholder="请输入手机号" value="">
+            </div>
+            <div class="ui-field-contain">
+                <label for="password">密码</label>
+                <input type="password" name="password" id="password" placeholder="请输入密码" value="">
+            </div>
+            <input id="signin-btn" data-role="submit" type="submit" value="登录" />
+        </form>
+    </div>
+    <a href="forget_password.html"><p style="text-align:right">忘记密码？</p></a>	
 </div>
