@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>用户登录</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <!--<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">-->
-    <link rel="stylesheet" href="css/themes/flat/jquery.mobile.flatui.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script>
-    $(function(){
-        $("#signin-btn").click(function() {
-            // TODO signin interface
-            location.href='house_list.html';
-        });
-    });
-    </script>
-</head>
-
-<body>
-<div data-role="page">
-
+<div id="signin-page" data-role="page">
 <!-- HEADER -->
 <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
 <h1 class="ui-title" role="heading" aria-level="1">
 房前屋后悬赏找房
 </h1>
+<a href="index.html" data-icon="home" data-iconpos="notext" data-shadow="true" data-iconshadow="true">首页</a>
 </div>
-
 <!-- MAIN -->
 <div role="main" class="ui-content">
 	<div class="ui-field-contain">
@@ -52,8 +29,4 @@
 	<a href="forget_password.html"><p style="text-align:right">忘记密码？</p></a>	
 	
 </div>
-
 </div>
-
-</body>
-</html>
