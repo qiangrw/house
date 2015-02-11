@@ -18,8 +18,9 @@ $(function(){
                },
         submitHandler: function(form) {
                $.ajax({
-                           dataType: 'json',
-                           type: 'post',
+                           dataType: 'JSONP',
+                           type: 'GET',
+                           jsonCallback: 'callback',
                            url: config.api_url,
                            data: {
                                querytype: "login",
@@ -28,22 +29,17 @@ $(function(){
                            },
                            success: function (responseData) {
                                var user = {
-                                uid: 1,
-                                password: "abcdef"
+                                uid: responseData.result.uid,
+                                identity: responseData.result.identity,
+                                password: $("#password").val()
                                };
                                localStorage.setItem('user', JSON.stringify(user));
                                $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
 
                            },
                            error: function (responseData) {
-                               // for test
-                               var user = {
-                                uid: 1,
-                                password: "abcdef"
-                               };
-                               localStorage.setItem('user', JSON.stringify(user));
-                               console.log('Ajax request not recieved!');
-                               $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
+                               // TODO ERROR HANDLER
+                               alert('Ajax request not recieved!');
                            }
                            });
                        }
