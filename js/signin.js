@@ -17,31 +17,32 @@ $(function(){
                         error.insertAfter(element.parent());
                },
         submitHandler: function(form) {
-               $.ajax({
-                           dataType: 'JSONP',
-                           type: 'GET',
-                           jsonCallback: 'callback',
-                           url: config.api_url,
-                           data: {
-                               querytype: "login",
-                               phone: $("#phone").val(),
-                               password: $("#password").val()
-                           },
-                           success: function (responseData) {
-                               var user = {
-                                uid: responseData.result.uid,
-                                identity: responseData.result.identity,
-                                password: $("#password").val()
-                               };
-                               localStorage.setItem('user', JSON.stringify(user));
-                               $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
+                var passhash = md5($("#password").val());
+                $.ajax({
+                    dataType: 'JSONP',
+                    type: 'GET',
+                    jsonCallback: 'callback',
+                    url: config.api_url,
+                    data: {
+                       querytype: "login",
+                       phone: $("#phone").val(),
+                       password: passhash
+                    },
+                    success: function (responseData) {
+                       var user = {
+                        uid: responseData.result.uid,
+                        identity: responseData.result.identity,
+                        password: passhash
+                       };
+                       localStorage.setItem('user', JSON.stringify(user));
+                       $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
 
-                           },
-                           error: function (responseData) {
-                               // TODO ERROR HANDLER
-                               alert('Ajax request not recieved!');
-                           }
-                           });
-                       }
+                    },
+                    error: function (responseData) {
+                       // TODO ERROR HANDLER
+                       alert('Ajax request not recieved!');
+                    }
+                });
+        }
     });
 });
