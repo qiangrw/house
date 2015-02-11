@@ -2,6 +2,7 @@
 
 <!-- HEADER -->
 <div data-role="header" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
+<script src="js/app/signup.js"></script>
 <a href="index.html" data-icon="delete" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">取消</a>
 <h1 class="ui-title" role="heading" aria-level="1">
 用户注册
@@ -10,57 +11,45 @@
 
 <!-- MAIN -->
 <div role="main" class="ui-content">
+<form id="signup-form">
+    <div class="ui-field-contain">
+        <label for="username">用户昵称</label>
+        <input type="text" name="username" id="username" placeholder="请输入您的名字" value="">
+    </div>
+    <div class="ui-field-contain">
+        <label for="phone">手机号</label>
+        <input type="text" name="phone" id="phone" placeholder="请输入手机号" value="">
+    </div>
+    <div class="ui-field-contain">
+        <label for="vcode">验证码</label>
+        <div class="ui-grid-a">
+        <div class="ui-block-a">
+        <input type="text" name="vcode" id="vcode" value="" placeholder="请输入验证码">
+        </div>
+        <div class="ui-block-b" style="margin-top: 16px; padding-left: 20px;">
+        <a id="get-vcode-btn" class="ui-shadow" href="#" style="top: 20px;">免费获取</a>
+        </div>
+        </div>
+    </div>
+    <div class="ui-field-contain">
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password" placeholder="请输入密码" value="">
+    </div>
+    <div class="ui-field-contain">
+        <label for="password2">确认密码</label>
+        <input type="password" name="password2" id="password2" placeholder="请再次输入密码" value="">
+    </div>
 
-<div class="ui-field-contain">
-    <label for="nickname">用户昵称</label>
-    <input type="text" name="nickname" id="nickname" placeholder="请输入您的名字" value="">
-</div>
-<div class="ui-field-contain">
-    <label for="phone">手机号</label>
-    <input type="text" name="phone" id="phone" placeholder="请输入手机号" value="">
-</div>
-<div class="ui-field-contain">
-    <label for="vcode">验证码</label>
-    <div class="ui-grid-a">
+    <div id="slider-type" class="ui-grid-solo">
     <div class="ui-block-a">
-    <input type="text" name="vcode" id="vcode" value="" placeholder="请输入验证码">
+    <select name="identity" id="type" data-role="slider" data-theme="b" style="width:90%" alt="滑动按钮选择身份">
+        <option value="0">我是找房客</option>
+        <option value="1">我是经纪人</option>
+    </select>
     </div>
-    <div class="ui-block-b" style="margin-top: 16px; padding-left: 20px;">
-    <a class="ui-shadow" href="#" style="top: 20px;">免费获取</a>
     </div>
-    </div>
-</div>
-<div class="ui-field-contain">
-    <label for="password">密码</label>
-    <input type="password" name="password" id="password" placeholder="请输入密码" value="">
-</div>
-<div class="ui-field-contain">
-    <label for="password2">确认密码</label>
-    <input type="password" name="password2" id="password2" placeholder="请再次输入密码" value="">
-</div>
-
-<div class="ui-field-contain">
-    <label for="password2">确认密码</label>
-    <input type="password" name="password2" id="password2" placeholder="请再次输入密码" value="">
-</div>
-
-<div id="slider-type" class="ui-grid-solo">
-<div class="ui-block-a">
-<select name="type" id="type" data-role="slider" data-theme="b" style="width:90%" alt="滑动按钮选择身份">
-    <option value="0">我是找房客</option>
-    <option value="1">我是经纪人</option>
-</select>
-</div>
-</div>
-
-
-<div data-demo-html="true">
-<div class="ui-grid-solo">
-    <div class="ui-block-a">
-    <a href="signup_succ.html" id="sign-btn" class="ui-shadow ui-btn ui-corner-all" data-theme="d">注册</a>
-    </div>
-</div>
-</div>
+<input id="signup-btn" data-role="submit" type="submit" value="注册" />
+</form>
 
 </div>
 

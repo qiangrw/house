@@ -29,13 +29,17 @@ $(function(){
                        password: passhash
                     },
                     success: function (responseData) {
-                       var user = {
-                        uid: responseData.result.uid,
-                        identity: responseData.result.identity,
-                        password: passhash
-                       };
-                       localStorage.setItem('user', JSON.stringify(user));
-                       $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
+                        if (responseData.result.status == 1) { 
+                           var user = {
+                            uid: responseData.result.uid,
+                            identity: responseData.result.identity,
+                            password: passhash
+                           };
+                           localStorage.setItem('user', JSON.stringify(user));
+                           $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
+                       } else {
+                        alert(responseData.result.err_msg)
+                       }
 
                     },
                     error: function (responseData) {
