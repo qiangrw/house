@@ -1,5 +1,6 @@
 $(function(){
     var config = JSON.parse(localStorage.getItem("config"));
+    /*
     $("#get-vcode-btn").click(function() {
         if ($("#phone").val().length != 11) {
             alert("请填写手机号");
@@ -8,7 +9,7 @@ $(function(){
         $.ajax({
             dataType: 'JSONP',
             type: 'GET',
-            jsonCallback: 'callback',
+            jsonCallback: 'jsonp',
             url: config.api_url,
             data: {
                querytype: "captcha",
@@ -25,7 +26,7 @@ $(function(){
             }
         });
         
-    });
+    });*/
     $("#signup-form").validate( {
         rules: {
                 username: {
@@ -38,11 +39,12 @@ $(function(){
                     minlength: 11,
                     maxlength: 11
                     },
-                vcode: {
+                /*vcode: {
                     required: true,
                     minlength: 1,
                     maxlength: 10
                     },
+                */
                 password: {
                     required: true,
                     minlength: 6,
@@ -83,7 +85,7 @@ $(function(){
                             password: passhash
                            };
                            localStorage.setItem('user', JSON.stringify(user));
-                           $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
+                           $( ":mobile-pagecontainer" ).pagecontainer( "change", "signup_succ.html", { role: "page" } );
                        } else {
                             alert(responseData.result.err_msg)
                        }
