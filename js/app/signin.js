@@ -32,6 +32,7 @@ $(function(){
                         if (responseData.result.status == 1) { 
                            var user = {
                             uid: responseData.result.uid,
+                            phone: $("#phone").val(),
                             identity: responseData.result.identity,
                             password: passhash
                            };

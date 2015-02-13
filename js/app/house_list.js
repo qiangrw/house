@@ -17,6 +17,7 @@ $(function(){
                          alert(data.mainNotice);
                      } else {
                          // deal with these data
+                         console.log(data.result);
                          userinfo = data.result.userinfo;
                          requestinfo = data.result.requestinfo;
                          housesheetinfo = data.result.housesheetinfo;

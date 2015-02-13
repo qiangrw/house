@@ -1,8 +1,9 @@
 <div id="post-page" data-role="page">
     <!-- HEADER -->
     <div data-role="header"  data-position="fixed" style="overflow:hidden;" role="banner" class="ui-header ui-bar-inherit">
+        <script src="js/menu.js"></script>
         <script src="js/app/post.js"></script>
-        <h1 class="ui-title" role="heading" aria-level="1">悬赏找整租</h1>
+        <h1 class="ui-title" role="heading" aria-level="1">悬赏租房</h1>
         <a href="#outside" data-icon="bars" data-iconpos="notext" data-shadow="true" data-iconshadow="true">Menu</a>
         <a href="reward_condition.html" data-icon="edit" data-iconpos="notext" data-shadow="true" data-iconshadow="true">change</a>
     </div>
@@ -16,18 +17,31 @@
         </div>
 
         <h2>请输入您对房子的要求</h2>
-
         <form id="post-form">
             <div class="ui-field-contain">
-                <label for="room-type">居室户型</label>
-                <select select name="room-type" id="room-type" data-native-menu="false">
-                                    <option value="1">一居室</option>
-                                    <option value="2">二居室</option>
-                                    <option value="3">三居室</option>
-                                    <option value="4">四居室</option>
-                                    <option value="5">五居室及以上</option>
+                <label for="roomtype">居室户型</label>
+                <select select name="roomtype" id="roomtype" data-native-menu="false">
+                        <option value="1">一居室</option>
+                        <option value="2">二居室</option>
+                        <option value="3">三居室</option>
+                        <option value="4">四居室</option>
+                        <option value="5">五居室及以上</option>
                 </select>
             </div>
+            <div class="ui-field-contain">
+                <label for="hezutype">合租户型</label>
+                <select select name="hezutype" id="hezutype" data-native-menu="false">
+                        <option value="1">非隔断</option>
+                        <option value="2">隔断</option>
+                        <option value="3">合租床位</option>
+                </select>
+            </div> 
+            <div class="ui-field-contain">
+                <label for="movintime">入住时间</label>
+                <input type="number" name="movintime" id="movintime" placeholder="请输入您的入住时间" value="">
+            </div>
+
+
             <div class="ui-field-contain">
                 <label for="budget">租房预算</label>
                 <input type="number" name="budget" id="budget" placeholder="请输入您的租房预算（元/月）" value="">
@@ -37,19 +51,19 @@
                 <input type="number" name="rewards" id="rewards" placeholder="请输入您的悬赏金额" value="">
             </div>
             <div class="ui-field-contain">	
-                <label for="select-choice-c">个性标签</label>
-                <select select name="select-choice-c" id="select-choice-c" data-native-menu="false">
-                                    <option value="null">请选择您的个性标签</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                             </select>		
+                <label for="marks">个性标签</label>
+                <select name="marks" id="marks" data-native-menu="false">
+                        <option value="">请选择您的个性标签</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                </select>		
             </div>
             <div class="ui-field-contain">
-                <label for="select-choice-d">目标区域</label>
-                <a href="#" class="ui-shadow ui-corner-all ui-btn ui-btn-icon-right ui-icon-carat-r">选择区域</a>
-
+                <label for="location">目标区域</label>
+                <input type="text" name="lng" id="lng" placeholder="坐标NG" value="">
+                <input type="text" name="lat" id="lat" placeholder="坐标AT" value="">
             </div>
 
             <h3>补充说明</h3>

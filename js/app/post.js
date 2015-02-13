@@ -1,31 +1,25 @@
 $(function(){
     var config = JSON.parse(localStorage.getItem("config"));
+    var user   = JSON.parse(localStorage.getItem('user'));
     $("#post-form").validate( {
         rules: {
-                username: {
-                    required: true,
-                    minlength: 1,
-                    maxlength: 40
-                    },
-                phone: {
-                    required: true,
-                    minlength: 11,
-                    maxlength: 11
-                    },
-                password: {
-                    required: true,
-                    minlength: 6,
-                    maxlength: 12
-                },
-                password2: {
-                    required: true,
-                    minlength: 6,
-                    maxlength: 12,
-                    equalTo: "#password"
-                },
-                identity: {
+                rewards: {
                     required: true
-                }
+                    },
+                marks: {
+                    required: true
+                },
+                lng: {
+                    required: true,
+                },
+                lat: {
+                    required: true
+                },
+                notice: {required: true },
+                budget: {required: true },
+                roomtype: {required: true },
+                hezutype: {required: true },
+                movintime: {required: true }
                },
         errorPlacement: function(error, element) {
                         error.insertAfter(element.parent());
@@ -37,30 +31,31 @@ $(function(){
                     jsonCallback: 'callback',
                     url: config.api_url,
                     data: {
-                       querytype: "register",
-                       username: $("#username").val(),
-                       phone: $("#phone").val(),
-                       password: $("#password").val(),
-                       identity: $("#identity").val(),
+                       querytype: "postrequest",
+                       uid: user.uid,
+                       password: user.password,
+                       housetype: getParameter("housetype"),
+                       roomtype: $("#roomtype").val(),
+                       rewards: $("#rewards").val(),
+                       marks: $("#marks").val(),
+                       lng: $("#lng").val(),
+                       lat: $("#lat").val(),
+                       notice: $("#notice").val(),
+                       budget: $("#budget").val(),
+                       hezutype: $("#hezutype").val(),
+                       movintime: $("#movintime").val()
                     },
                     success: function (responseData) {
-                        if (responseData.result.status == 1) {
-                           var passhash = md5($("#password").val());
-                           var user = {
-                            uid: responseData.result.uid,
-                            identity: responseData.result.identity,
-                            password: passhash
-                           };
+                        if (responseData.mainStatus != "1") {
+                            alert(responseData.mainNotice);
+                        } else {
+                        if (responseData.result.status == "1") {
                            localStorage.setItem('user', JSON.stringify(user));
-                           $( ":mobile-pagecontainer" ).pagecontainer( "change", "signup_succ.html", { role: "page" } );
+                           $( ":mobile-pagecontainer" ).pagecontainer( "change", "post_succ.html", { role: "page" } );
                        } else {
                             alert(responseData.result.err_msg)
                        }
-
-                    },
-                    error: function (responseData) {
-                       // TODO ERROR HANDLER
-                       alert('Ajax request not recieved!');
+                       }
                     }
                 });
         }
