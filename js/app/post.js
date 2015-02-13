@@ -1,6 +1,6 @@
 $(function(){
     var config = JSON.parse(localStorage.getItem("config"));
-    $("#signup-form").validate( {
+    $("#post-form").validate( {
         rules: {
                 username: {
                     required: true,
@@ -12,12 +12,6 @@ $(function(){
                     minlength: 11,
                     maxlength: 11
                     },
-                /*vcode: {
-                    required: true,
-                    minlength: 1,
-                    maxlength: 10
-                    },
-                */
                 password: {
                     required: true,
                     minlength: 6,
