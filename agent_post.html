@@ -5,7 +5,7 @@
         <script src="js/app/agent_post.js"></script>
         <h1 class="ui-title" role="heading" aria-level="1">悬赏租房</h1>
         <a href="#outside" data-icon="bars" data-iconpos="notext" data-shadow="true" data-iconshadow="true">Menu</a>
-        <a href="reward_condition.html" data-icon="edit" data-iconpos="notext" data-shadow="true" data-iconshadow="true">change</a>
+        <a href="agent_reward_condition.html" data-icon="edit" data-iconpos="notext" data-shadow="true" data-iconshadow="true">change</a>
     </div>
 
 
@@ -19,7 +19,15 @@
         <h2>请输入您对房子的要求</h2>
         <form id="post-form">
             <div class="ui-field-contain">
-                <label for="roomtype">居室户型</label>
+                <label for="areaname">小区名</label>
+                <input type="text" name="areaname" id="areaname" placeholder="请输入小区名" value="">
+            </div>
+            <div class="ui-field-contain">
+                <label for="areaaddr">小区地址</label>
+                <input type="text" name="areaaddr" id="areaaddr" placeholder="请输入小区地址" value="">
+            </div>
+            <div class="ui-field-contain">
+                <label for="roomtype">户型</label>
                 <select select name="roomtype" id="roomtype" data-native-menu="false">
                         <option value="1">一居室</option>
                         <option value="2">二居室</option>
@@ -29,41 +37,20 @@
                 </select>
             </div>
             <div class="ui-field-contain">
-                <label for="hezutype">合租户型</label>
-                <select select name="hezutype" id="hezutype" data-native-menu="false">
-                        <option value="1">非隔断</option>
-                        <option value="2">隔断</option>
-                        <option value="3">合租床位</option>
-                </select>
-            </div> 
-            <div class="ui-field-contain">
-                <label for="movintime">入住时间</label>
-                <input type="number" name="movintime" id="movintime" placeholder="请输入您的入住时间" value="">
-            </div>
-
-
-            <div class="ui-field-contain">
-                <label for="budget">租房预算</label>
-                <input type="number" name="budget" id="budget" placeholder="请输入您的租房预算（元/月）" value="">
-            </div>
-            <div class="ui-field-contain">	
-                <label for="rewards">悬赏金额</label>
-                <input type="number" name="rewards" id="rewards" placeholder="请输入您的悬赏金额" value="">
-            </div>
-            <div class="ui-field-contain">	
-                <label for="marks">个性标签</label>
-                <select name="marks" id="marks" data-native-menu="false">
-                        <option value="">请选择您的个性标签</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                </select>		
+                <label for="price">租金</label>
+                <input type="number" name="price" id="price" placeholder="请输入租金（元/月）" value="">
             </div>
             <div class="ui-field-contain">
-                <label for="location">目标区域</label>
-                <input type="text" name="lng" id="lng" placeholder="坐标NG" value="">
-                <input type="text" name="lat" id="lat" placeholder="坐标AT" value="">
+                <label for="areaname">商圈</label>
+                <input type="text" name="areaname" id="areaname" placeholder="请输入房子所在商圈" value="">
+            </div>
+            <div class="ui-field-contain">
+                <label for="area">面积</label>
+                <input type="number" name="area" id="area" placeholder="请输入租房面积（平方米）" value="">
+            </div>
+            <div class="ui-field-contain">
+                <label for="floor">楼层</label>
+                <input type="text" name="floor" id="floor" placeholder="如第2层/共13层" value="">
             </div>
 
             <h3>补充说明</h3>
