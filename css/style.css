@@ -1,4 +1,6 @@
 #slider-type .ui-slider {width: 100%;}
+.pull-right { float:right; }
+.tag {height: 12px; margin-bottom: 2px; }
 
 label.error {
 		color: red;
@@ -26,3 +28,4 @@ em {
 	font-weight: bold;
 	padding-right: .25em;
 }
+
