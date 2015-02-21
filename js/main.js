@@ -7,8 +7,11 @@ $(function(){
     localStorage.setItem('config', JSON.stringify(config));
     var user   = JSON.parse(localStorage.getItem('user'));
     if (user != null) {
-        // $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
-        $( ":mobile-pagecontainer" ).pagecontainer( "change", "agent_message.html", { role: "page" } );
+        if (user.identity == 1) {
+            $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
+        } else {
+            $( ":mobile-pagecontainer" ).pagecontainer( "change", "agent_message.html", { role: "page" } );
+        }
     }
 });
 

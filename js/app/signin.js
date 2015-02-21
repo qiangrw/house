@@ -37,7 +37,11 @@ $(function(){
                             password: passhash
                            };
                            localStorage.setItem('user', JSON.stringify(user));
-                           $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
+                            if (user.identity == 1) {
+                                $( ":mobile-pagecontainer" ).pagecontainer( "change", "house_list.html", { role: "page" } );
+                            } else {
+                                $( ":mobile-pagecontainer" ).pagecontainer( "change", "agent_message.html", { role: "page" } );
+                            }  
                        } else {
                         alert(responseData.result.err_msg)
                        }
